@@ -75,6 +75,7 @@ class Filter:
         return False, None
     def crashGif(message:discord.Message) -> bool:
         urls = Utils.getUrls(message.content)
+        print(urls)
         for url in urls:
             url = Utils.convertOrPassGifUrl(url)
             if url[-4:] == ".gif":
